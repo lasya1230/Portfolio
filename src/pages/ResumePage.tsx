@@ -80,7 +80,7 @@ const ResumePage = () => {
               Passionate IT student specializing in Agentic & Generative AI. Building autonomous, reasoning-driven multi-agent systems.
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
-              <ContactChip icon={<Mail className="w-4 h-4" />} text="lasyalucky0635@gmail.com" />
+              <ContactChip icon={<Mail className="w-4 h-4" />} text="lasyah2909@gmail.com" />
               <ContactChip icon={<Phone className="w-4 h-4" />} text="+91 7780377071" />
               <ContactChip icon={<MapPin className="w-4 h-4" />} text="Hyderabad" />
             </div>

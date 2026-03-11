@@ -248,11 +248,11 @@ const Portfolio = () => {
             a project in mind or just want to connect, I'd love to hear from you.
           </p>
           <a
-            href="mailto:lasyalucky0635@gmail.com"
+            href="mailto:lasyah2909@gmail.com"
             className="btn-primary inline-flex items-center gap-2 text-lg mb-10"
           >
             <Mail className="w-5 h-5" />
-            lasyalucky0635@gmail.com
+            lasyah2909@gmail.com
           </a>
           <div className="flex justify-center gap-6 mt-6">
             <a
