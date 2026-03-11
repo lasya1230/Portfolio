@@ -2,94 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 30% 10%;
+    --background: 220 15% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 30% 10%;
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 80% 45%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 35 100% 50%;
+    --primary-foreground: 220 15% 8%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 30% 15%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 80%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 220 10% 18%;
+    --muted-foreground: 220 5% 55%;
 
-    --accent: 170 60% 40%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 35 100% 50%;
+    --accent-foreground: 220 15% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 210 80% 45%;
+    --border: 220 10% 18%;
+    --input: 220 10% 18%;
+    --ring: 35 100% 50%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-
-    --resume-hero-gradient: linear-gradient(135deg, hsl(210 80% 45%), hsl(170 60% 40%));
-    --resume-section-border: hsl(210 80% 45% / 0.15);
-    --resume-tag-bg: hsl(210 80% 45% / 0.08);
-    --resume-tag-text: hsl(210 80% 50%);
-    --resume-timeline-dot: hsl(170 60% 40%);
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 15% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 35 100% 50%;
+    --sidebar-primary-foreground: 220 15% 8%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 10% 18%;
+    --sidebar-ring: 35 100% 50%;
   }
 }
 
@@ -100,5 +54,70 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .section-label {
+    @apply font-mono text-sm tracking-wider text-muted-foreground mb-4;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-bold text-foreground leading-tight;
+  }
+
+  .highlight-text {
+    color: hsl(var(--primary));
+  }
+
+  .nav-link {
+    @apply font-mono text-sm text-muted-foreground hover:text-foreground transition-colors;
+  }
+
+  .project-card {
+    @apply bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300;
+  }
+
+  .skill-card {
+    @apply bg-card rounded-xl p-6 border border-border;
+  }
+
+  .skill-item {
+    @apply text-sm text-muted-foreground py-2 border-b border-border last:border-b-0;
+  }
+
+  .stat-value {
+    @apply text-4xl font-bold;
+    color: hsl(var(--primary));
+  }
+
+  .stat-label {
+    @apply text-sm text-muted-foreground mt-1;
+  }
+
+  .btn-primary {
+    @apply font-mono text-sm px-6 py-3 rounded-lg border-2 transition-all duration-300;
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+  }
+
+  .btn-primary:hover {
+    background: hsl(var(--primary));
+    color: hsl(var(--background));
+  }
+
+  .btn-outline {
+    @apply font-mono text-sm px-6 py-3 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all duration-300;
+  }
+
+  .tag {
+    @apply font-mono text-xs px-3 py-1.5 rounded-full;
+    background: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
   }
 }

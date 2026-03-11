@@ -1,7 +1,7 @@
-import ResumePage from "./ResumePage";
+import Portfolio from "./Portfolio";
 
 const Index = () => {
-  return <ResumePage />;
+  return <Portfolio />;
 };
 
 export default Index;
